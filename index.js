@@ -48,6 +48,20 @@ const questions = [
 
 function validateColor(color) {
     // TODO: How to validate if color exists? Or just no validation and just have a default color?
+    if (color.includes("#")) {
+        let regex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+        if (!regex.test(color)) {
+            console.log(" invalid hex number")
+            return false
+        }
+
+        return true
+    }
+
+    // if (!CSS.supports("color", color)) {
+    //     console.log(" Not a valid color, please try a different one")
+    //     return false
+    // }
     return true
 }
 
