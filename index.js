@@ -1,9 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const cssColors = require("css-color-names");
 
 const questions = [
     {
-        message: "Enter 3 characters for your logo",
+        message: "Enter 3 characters for your logo:",
         name: "name",
         validate: function(value) {
             if (value.length > 3) {
@@ -47,7 +48,6 @@ const questions = [
 
 
 function validateColor(color) {
-    // TODO: How to validate if color exists? Or just no validation and just have a default color?
     if (color.includes("#")) {
         let regex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
         if (!regex.test(color)) {
@@ -58,10 +58,10 @@ function validateColor(color) {
         return true
     }
 
-    // if (!CSS.supports("color", color)) {
-    //     console.log(" Not a valid color, please try a different one")
-    //     return false
-    // }
+    if (!cssColors[color.toLowerCase()]) {
+        console.log("Color is not valid. Please try another or use hex")
+        return false
+    }
     return true
 }
 
