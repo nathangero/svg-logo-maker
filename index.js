@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cssColors = require("css-color-names");
+const Square = require("./lib/Square");
 
 const questions = [
     {
@@ -66,8 +67,12 @@ function validateColor(color) {
 }
 
 async function askUser() {
-    let { name, textColor, shape, shapeColor } = await inquirer.prompt(questions)
-    console.log(name, textColor, shape, shapeColor)
+    let { name, textColor, shape, shapeColor } = await inquirer.prompt(questions);
+    console.log(name, textColor, shape, shapeColor);
+
+    let logo = new Square(name, textColor, shapeColor);
+    console.log("logo:", logo.render());
+    // console.log("test:", logo.testRender())
 }
 
 askUser()
