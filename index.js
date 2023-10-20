@@ -73,6 +73,10 @@ async function askUser() {
     let logo = new Square(name, textColor, shapeColor);
     console.log("logo:", logo.render());
     // console.log("test:", logo.testRender())
+
+    fs.writeFile("./logo.svg", logo.render(), err => {
+        err ? console.log(err) : console.log("Generated logo.svg")
+    })
 }
 
 askUser()
