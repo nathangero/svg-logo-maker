@@ -1,7 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cssColors = require("css-color-names");
+const Shape = require("./lib/Shape");
+const Circle = require("./lib/Circle");
 const Square = require("./lib/Square");
+const Triangle = require("./lib/Triangle");
 
 const questions = [
     {
@@ -70,9 +73,26 @@ async function askUser() {
     let { name, textColor, shape, shapeColor } = await inquirer.prompt(questions);
     console.log(name, textColor, shape, shapeColor);
 
-    let logo = new Square(name, textColor, shapeColor);
-    console.log("logo:", logo.render());
-    // console.log("test:", logo.testRender())
+    let logo;
+
+    switch (shape) {
+        case "Circle":
+            logo = new Circle(name, textColor, shapeColor);
+            break;
+
+        case "Square":
+            logo = new Square(name, textColor, shapeColor);
+            break;
+        
+        case "Triangle":
+            logo = new Triangle(name, textColor, shapeColor);
+            break;
+
+        default: // This shouldn't run but just in case
+            logo = new Shape(name, textColor, shapeColor);
+    }
+
+    // console.log("logo:", logo.render());
 
     fs.writeFile("./logo.svg", logo.render(), err => {
         err ? console.log(err) : console.log("Generated logo.svg")
