@@ -12,7 +12,7 @@ const questions = [
         name: "name",
         validate: function(value) {
             if (value.length > 3) {
-                console.log("Enter no more than 3 characters.")
+                console.log(" Enter no more than 3 characters.")
                 return false
             }
 
@@ -55,7 +55,7 @@ function validateColor(color) {
     if (color.includes("#")) {
         let regex = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
         if (!regex.test(color)) {
-            console.log(" invalid hex number")
+            console.log(" invalid hex color")
             return false
         }
 
