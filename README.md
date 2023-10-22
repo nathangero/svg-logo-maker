@@ -13,7 +13,7 @@ Currently, the list of shapes are:
 * Square
 * Triangle
 
-There are validation checks for questions 1, 2, and 4. The amount of characters is checked if the length is less than 3. The colors are checked against a pre-made object of CSS colors, and against a Regex check of proper hex color format. 
+There are validation checks for questions 1, 2, and 4. The amount of characters is checked if the length is less than 3. The colors are checked against a pre-made object of CSS colors, and against a Regex check of proper hex color format.
 
 ## Video Walkthrough
 
@@ -63,3 +63,5 @@ There are validation checks for questions 1, 2, and 4. The amount of characters 
 [Hex color checking](https://www.geeksforgeeks.org/javascript-check-if-a-string-is-a-valid-hex-color-representation/#)
 
 [SVG Triangle points referrence](https://stackoverflow.com/a/54955284)
+
+[Jest expect() docs](https://jestjs.io/docs/expect)
