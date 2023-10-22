@@ -17,7 +17,7 @@ There are validation checks for questions 1, 2, and 4. The amount of characters 
 
 ## Video Walkthrough
 
-
+https://github.com/nathangero/svg-logo-maker/assets/25491849/dd3312e2-39ce-4ecb-a353-8d2612b7bde4
 
 ## Learning Points
 
