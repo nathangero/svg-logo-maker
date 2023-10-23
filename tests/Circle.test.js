@@ -1,4 +1,4 @@
-const Circle = require("../lib/Circle");
+const { Circle } = require("../lib/Shape");
 
 describe("Circle", () => {
     it("should return a valid <rect> and <text> inside of a <svg> tag", () => {

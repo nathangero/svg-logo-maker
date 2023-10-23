@@ -1,10 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cssColors = require("css-color-names");
-const Shape = require("./lib/Shape");
-const Circle = require("./lib/Circle");
-const Square = require("./lib/Square");
-const Triangle = require("./lib/Triangle");
+const { Shape, Circle, Square, Triangle } = require("./lib/Shape");
+// const Circle = require("./lib/Circle");
+// const Square = require("./lib/Square");
+// const Triangle = require("./lib/Triangle");
 
 const questions = [
     {
@@ -119,9 +119,9 @@ if (process.argv[2]) {
             logo = new Triangle(name, textColor, shapeColor);
             break;
 
-        default: // This shouldn't run but just in case
-            console.log("default");
-            logo = new Shape(name, textColor, shapeColor);
+        default: // Run the program like normal
+            console.log("Only takes 'circle', 'square', or 'triange' for testing");
+            return;
     }
 
     // console.log("logo:", logo.render());

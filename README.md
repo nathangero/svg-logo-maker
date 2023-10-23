@@ -73,6 +73,43 @@ https://github.com/nathangero/svg-logo-maker/assets/25491849/dd3312e2-39ce-4ecb-
     <text x="124" y="130" font-family="helvetica" font-size="30" fill="${this.textColor}">${this.text}</text>
     ```
 
+## Code Snippet
+
+I made this little test script to see if I was making SVG files properly. This helped speed up the testing instead of having to go through each question over and over again.
+```js
+if (process.argv[2]) {
+    let name = "nag";
+    let textColor = "red";
+    let shapeColor = "black";
+    switch (process.argv[2]) {
+        case "circle":
+            console.log("circle");
+            logo = new Circle(name, textColor, shapeColor);
+            break;
+
+        case "square":
+            console.log("square");
+            logo = new Square(name, textColor, shapeColor);
+            break;
+        
+        case "triangle":
+            console.log("triangle");
+            logo = new Triangle(name, textColor, shapeColor);
+            break;
+
+        default: // Run the program like normal
+            console.log("Only takes 'circle', 'square', or 'triange' for testing");
+            return;
+    }
+
+    fs.writeFile("./logo.svg", logo.render(), err => {
+        err ? console.log(err) : console.log("Generated logo.svg")
+    })
+} else {
+    askUser()
+}
+```
+
 ## Credits
 
 [CSS Color Names package](https://github.com/bahamas10/css-color-names/tree/master)

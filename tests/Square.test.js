@@ -1,4 +1,4 @@
-const Square = require("../lib/Square");
+const { Square } = require("../lib/Shape");
 
 describe("Square", () => {
     it("should return a valid <rect> and <text> inside of a <svg> tag", () => {
