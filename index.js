@@ -119,9 +119,9 @@ if (process.argv[2]) {
             logo = new Triangle(name, textColor, shapeColor);
             break;
 
-        default: // This shouldn't run but just in case
-            console.log("default");
-            logo = new Shape(name, textColor, shapeColor);
+        default: // Run the program like normal
+            console.log("Only takes 'circle', 'square', or 'triange' for testing");
+            return;
     }
 
     // console.log("logo:", logo.render());
