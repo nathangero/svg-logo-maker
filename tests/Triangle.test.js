@@ -1,4 +1,4 @@
-const Triangle = require("../lib/Triangle");
+const { Triangle } = require("../lib/Shape");
 
 describe("Triangle", () => {
     it("should return a valid <rect> and <text> inside of a <svg> tag", () => {

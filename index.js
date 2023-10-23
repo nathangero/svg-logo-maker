@@ -1,10 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const cssColors = require("css-color-names");
-const Shape = require("./lib/Shape");
-const Circle = require("./lib/Circle");
-const Square = require("./lib/Square");
-const Triangle = require("./lib/Triangle");
+const { Shape, Circle, Square, Triangle } = require("./lib/Shape");
+// const Circle = require("./lib/Circle");
+// const Square = require("./lib/Square");
+// const Triangle = require("./lib/Triangle");
 
 const questions = [
     {
