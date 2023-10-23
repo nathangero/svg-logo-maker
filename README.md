@@ -15,6 +15,27 @@ Currently, the list of shapes are:
 
 There are validation checks for questions 1, 2, and 4. The amount of characters is checked if the length is less than 3. The colors are checked against a pre-made object of CSS colors, and against a Regex check of proper hex color format.
 
+## Installation
+
+1. Download/clone the code from the repo
+2. In the terminal/command prompt, locate the directory of the code.
+3. Install the node packages with
+```bash
+npm install
+```
+
+## Usage
+
+1. While at the code directory in the terminal/command prompt
+2. Run the following command
+```bash
+node index.js
+```
+3. Answer the following questions to create your SVG image.
+4. The HTML code generated from the application will be in the root directory of the code called ```logo.svg```
+5. Open that file in a browser and you'll see your SVG image
+
+
 ## Video Walkthrough
 
 https://github.com/nathangero/svg-logo-maker/assets/25491849/dd3312e2-39ce-4ecb-a353-8d2612b7bde4
